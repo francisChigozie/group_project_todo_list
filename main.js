@@ -1,7 +1,7 @@
 // alert("Hello")
 
 // creating array of object
-const todos = [
+let todos = [
     {'text': 'Walk the dog'},
     {'text': 'Buy some milk'},
     {'text': 'Call the doctor'}
@@ -10,10 +10,10 @@ const todos = [
 
 // Update todos list
 function updateTodos () {
+    console.log('The Array Is:')
     todos.forEach(i => console.log(i.text))
-
 }
-updateTodos()
+// updateTodos()
 
 const newTodo = "I'm new todo :)"
 
@@ -24,26 +24,42 @@ function addTodo (todo) {
     // updateTodos()
 }
 
-console.log('=====================')
+console.log('===addTodo====')
 
 addTodo(newTodo)
 updateTodos()
 
 // Mark todo as done
-function doneTodo (todo) {
-    let err = true
+
+function doneItem (todo) {
     todos.forEach(i => {
         if (i.text === todo) {
-            i.text += '***'
-            err = false
+            console.log(i.text + '..to be done here :))))')
         }
     })
-
-    if (err) {
-        console.log('Something in doneTodo is wrong!!!!!!!')
-    }
-    console.log('=== From doneTodo() ===')
-    updateTodos()
+    updateTodos
 }
 
-doneTodo(newTodo)
+const itemToDone = 'Call the doctor'
+doneItem(itemToDone)
+
+
+
+function deleteTodo (todo) {
+    for (let i=0; i<todos.length; i++) {
+        if (todos[i].text === todo) {
+            
+            todos.splice(i, 1)
+            break
+        }
+    }
+
+    console.log('===deleteTodo===')
+    updateTodos()
+        
+}
+
+const itemToDelete = 'Buy some milk'
+// deleteTodo(itemToDelete)
+updateTodos()
+deleteTodo(itemToDelete)
