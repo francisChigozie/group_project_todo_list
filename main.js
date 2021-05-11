@@ -10,7 +10,7 @@ let todos = [
     {'text': 'Buy some milk', 'complete': true},
     {'text': 'Call the doctor', 'complete': false}
 ]
-updateTodos()
+// updateTodos()
 
 // Update todos list
 function updateTodos () {
@@ -36,9 +36,54 @@ function updateTodos () {
             }
                       
         })
+        item.addEventListener('click', j => {
+            
+            
+            if (item.classList.contains('complete')) {
+                i.complete = false
+                updateTodos()
+
+            } else {
+                i.complete = true
+            updateTodos()
+
+            }
+                      
+        })
+
+        item.addEventListener('contextmenu', k => {
+            k.preventDefault()
+
+            item.remove()
+            todos.splice(i, 1)
+        })
+       
+
+
         
-        // console.log(item)
+
+
+
+
+
+
+
+
+        
+        
         list.appendChild(item)
+        
+
+
+
+        
+
+
+
+
+
+
+
         
     })
 }
