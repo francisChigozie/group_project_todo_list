@@ -11,17 +11,32 @@
     <h1>C & K Todo Project</h1>
 
     <div class="container">
-        <form action="" class="form" id="form">
-            <input type="text" name="" id="input" class="input" placeholder="Add todo">
+        <form action="submit" class="form-today" id="form-today" >
+            <fieldset>
+                <legend>To-Do</legend>
+                <p>
+                    <label class="select"><select name="toDoToday" id="toDoToday">
+                        <option value="#">Select What to do..</option>
+                  <div class="slect-box">     
+                        <option value="#email">Write an Email</option>
+                        <option value="#dog">Walk the Dog</option>
+                        <option value="#icream">Buy Ice Craem</option>
+                        <option value="#pizza">Order some Pizza</option>
+                        <option value="#shop">Do small Shopping</option>
+                        <option value="#news">Check the News</option>
+                        <option value="#book">Read a Book</option>
+                        <option value="#friday">Weekend Planning</option> 
+                  </div>     
+                    </select>
+                    <input type="button" value="ADD"></label>
+                </p>
+            </fieldset>
+            <input class="btn-add" type="button" value="ADD"><br>
+           <label class="input-label"><input type="text" name="one" id="input" class="personal" placeholder="Write what to do.."></label><br>
+           <label class="input-label"><input type="text" name="" id="input" class="personal" placeholder="Write.."></label><br>
+           <label class="input-label"><input type="text" name="" id="input" class="personal" placeholder="Write.."></label><br><br>
+           <label class="btn-label"><input type="submit" value="Submit"></label>
         </form>
-
-        <ul class="list" id="list">
-            <li id="item" class="item">Buy ice cream</li>
-            <li id="item" class="item">Hello</li>
-            <li id="item" class="item">Hello again</li>
-            <li id="item" class="item">Read a book</li>
-            <li id="item" class="item">Check the news</li>
-        </ul>
         
     </div>
 

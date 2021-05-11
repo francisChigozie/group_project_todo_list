@@ -23,9 +23,28 @@ body {
 }
 
 h1 {
-    color: goldenrod;
+  color: rgb(204, 157, 40);
 }
-
+.personal{
+  text-align: center;
+}
+.input-label{
+  padding-left: 50px;
+}
+.btn-add{
+  float: right;
+}
+.btn-label{
+  padding-left: 113px;
+  background-color: gold;
+  }
+.select{
+  padding-left: 50px;
+}
+.marker{
+  padding-left: 220px;
+  
+}
 .container {
   height: 40vh;
   width: 50vh;
