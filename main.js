@@ -14,6 +14,7 @@ let todos = [
 
 // Update todos list
 function updateTodos () {
+    list.innerHTML = ''
     
     todos.forEach(i => {
         let item = document.createElement('li')
@@ -26,13 +27,24 @@ function updateTodos () {
         
     })
 }
-updateTodos()
+// updateTodos()
 
 const newTodo = "I'm new todo :)"
 
+form.addEventListener('submit', i => {
+    i.preventDefault()
+    todos.unshift({'text': input.value, 'complete': false})
+    input.value = ''
+    updateTodos()
+
+})
 
 // Add new todo to the array
 function addTodo (todo) {
+
+    
+
+
     todos.unshift({'text': todo, 'complete': false})
     // updateTodos()
 }
