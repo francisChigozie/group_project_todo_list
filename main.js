@@ -1,33 +1,46 @@
 // alert("Hello")
+const form = document.querySelector('form')
+const input = document.querySelector('input')
+const list = document.querySelector('ul')
+
 
 // creating array of object
 let todos = [
-    {'text': 'Walk the dog'},
-    {'text': 'Buy some milk'},
-    {'text': 'Call the doctor'}
+    {'text': 'Walk the dog', 'complete': false},
+    {'text': 'Buy some milk', 'complete': true},
+    {'text': 'Call the doctor', 'complete': false}
 ]
 
 
 // Update todos list
 function updateTodos () {
-    console.log('The Array Is:')
-    todos.forEach(i => console.log(i.text))
+    
+    todos.forEach(i => {
+        let item = document.createElement('li')
+        i.complete ? item.classList.add('complete') : item.classList.add('item')
+        
+        item.innerText = i.text
+        
+        // console.log(item)
+        list.appendChild(item)
+        
+    })
 }
-// updateTodos()
+updateTodos()
 
 const newTodo = "I'm new todo :)"
 
 
 // Add new todo to the array
 function addTodo (todo) {
-    todos.unshift({'text': todo})
+    todos.unshift({'text': todo, 'complete': false})
     // updateTodos()
 }
 
 console.log('===addTodo====')
 
-addTodo(newTodo)
-updateTodos()
+// addTodo(newTodo)
+// updateTodos()
 
 // Mark todo as done
 
@@ -40,8 +53,8 @@ function doneItem (todo) {
     updateTodos
 }
 
-const itemToDone = 'Call the doctor'
-doneItem(itemToDone)
+// const itemToDone = 'Call the doctor'
+// doneItem(itemToDone)
 
 
 
@@ -54,12 +67,13 @@ function deleteTodo (todo) {
         }
     }
 
-    console.log('===deleteTodo===')
-    updateTodos()
+    // console.log('===deleteTodo===')
+    // updateTodos()
         
 }
 
 const itemToDelete = 'Buy some milk'
 // deleteTodo(itemToDelete)
-updateTodos()
-deleteTodo(itemToDelete)
+// updateTodos()
+// deleteTodo(itemToDelete)
+// updateTodos()
