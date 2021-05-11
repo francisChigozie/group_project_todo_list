@@ -2,7 +2,7 @@
 const form = document.querySelector('form')
 const input = document.querySelector('input')
 const list = document.querySelector('ul')
-const items = document.querySelectorAll('li')
+
 
 // creating array of object
 let todos = [
@@ -10,6 +10,7 @@ let todos = [
     {'text': 'Buy some milk', 'complete': true},
     {'text': 'Call the doctor', 'complete': false}
 ]
+updateTodos()
 
 // Update todos list
 function updateTodos () {
@@ -21,6 +22,20 @@ function updateTodos () {
         i.complete ? item.classList.add('complete') : item.classList.add('item')
         
         item.innerText = i.text
+        item.addEventListener('click', j => {
+            
+            // i.preventDefault()
+            if (item.classList.contains('complete')) {
+                i.complete = false
+                updateTodos()
+
+            } else {
+                i.complete = true
+            updateTodos()
+
+            }
+                      
+        })
         
         // console.log(item)
         list.appendChild(item)
@@ -36,21 +51,6 @@ form.addEventListener('submit', i => {
     updateTodos()
 
 })
-
-
-// Done item
-function doneItem (todo) {
-    todos.forEach(i => {
-        if (i.text === todo) {
-            console.log(i.text + '..to be done here :))))')
-        }
-    })
-    updateTodos
-}
-
-// const itemToDone = 'Call the doctor'
-// doneItem(itemToDone)
-
 
 
 function deleteTodo (todo) {
