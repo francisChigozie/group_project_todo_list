@@ -57,33 +57,8 @@ function updateTodos () {
             item.remove()
             todos.splice(i, 1)
         })
-       
-
-
-        
-
-
-
-
-
-
-
-
-        
-        
+ 
         list.appendChild(item)
-        
-
-
-
-        
-
-
-
-
-
-
-
         
     })
 }
@@ -96,26 +71,5 @@ form.addEventListener('submit', i => {
     updateTodos()
 
 })
-
-
-function deleteTodo (todo) {
-    for (let i=0; i<todos.length; i++) {
-        if (todos[i].text === todo) {
-            
-            todos.splice(i, 1)
-            break
-        }
-    }
-
-    // console.log('===deleteTodo===')
-    // updateTodos()
-        
-}
-
-const itemToDelete = 'Buy some milk'
-// deleteTodo(itemToDelete)
-// updateTodos()
-// deleteTodo(itemToDelete)
-// updateTodos()
 
 window.addEventListener('load', updateTodos())
