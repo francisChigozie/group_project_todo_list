@@ -2,7 +2,7 @@
 const form = document.querySelector('form')
 const input = document.querySelector('input')
 const list = document.querySelector('ul')
-
+const items = document.querySelectorAll('li')
 
 // creating array of object
 let todos = [
@@ -11,13 +11,13 @@ let todos = [
     {'text': 'Call the doctor', 'complete': false}
 ]
 
-
 // Update todos list
 function updateTodos () {
     list.innerHTML = ''
     
     todos.forEach(i => {
         let item = document.createElement('li')
+        
         i.complete ? item.classList.add('complete') : item.classList.add('item')
         
         item.innerText = i.text
@@ -27,10 +27,8 @@ function updateTodos () {
         
     })
 }
-// updateTodos()
 
-const newTodo = "I'm new todo :)"
-
+// Create todo
 form.addEventListener('submit', i => {
     i.preventDefault()
     todos.unshift({'text': input.value, 'complete': false})
@@ -39,23 +37,8 @@ form.addEventListener('submit', i => {
 
 })
 
-// Add new todo to the array
-function addTodo (todo) {
 
-    
-
-
-    todos.unshift({'text': todo, 'complete': false})
-    // updateTodos()
-}
-
-console.log('===addTodo====')
-
-// addTodo(newTodo)
-// updateTodos()
-
-// Mark todo as done
-
+// Done item
 function doneItem (todo) {
     todos.forEach(i => {
         if (i.text === todo) {
@@ -89,3 +72,5 @@ const itemToDelete = 'Buy some milk'
 // updateTodos()
 // deleteTodo(itemToDelete)
 // updateTodos()
+
+window.addEventListener('load', updateTodos())
