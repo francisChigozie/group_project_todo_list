@@ -11,34 +11,34 @@
     <h1>C & K Todo Project</h1>
 
     <div class="container">
-        <form action="submit" class="form-today" id="form-today" >
+        <form action="submit-form" class="form-today" id="form-today" >
             <fieldset>
                 <legend>To-Do</legend>
                 <p>
-                    <label class="select"><select name="toDoToday" id="toDoToday">
-                        <option value="#">Select What to do..</option>
-                  <div class="slect-box">     
-                        <option value="#email">Write an Email</option>
-                        <option value="#dog">Walk the Dog</option>
-                        <option value="#icream">Buy Ice Craem</option>
-                        <option value="#pizza">Order some Pizza</option>
-                        <option value="#shop">Do small Shopping</option>
-                        <option value="#news">Check the News</option>
-                        <option value="#book">Read a Book</option>
-                        <option value="#friday">Weekend Planning</option> 
-                  </div>     
+                    <label class="select"><select id="selToDo">
+                        <option value="#">Select What to do..</option>    
+                        <option value="email">Write an Email</option>
+                        <option value="dog">Walk the Dog</option>
+                        <option value="icream">Buy Ice Craem</option>
+                        <option value="pizza">Order some Pizza</option>
+                        <option value="shop">Do small Shopping</option>
+                        <option value="news">Check the News</option>
+                        <option value="book">Read a Book</option>
+                        <option value="friday">Weekend Planning</option>     
                     </select>
-                    <input type="button" value="ADD"></label>
+                    <input type="button" value="ADD" onclick="selectToDo()"></label>
                 </p>
             </fieldset>
-            <input class="btn-add" type="button" value="ADD"><br>
-           <label class="input-label"><input type="text" name="one" id="input" class="personal" placeholder="Write what to do.."></label><br>
-           <label class="input-label"><input type="text" name="" id="input" class="personal" placeholder="Write.."></label><br>
-           <label class="input-label"><input type="text" name="" id="input" class="personal" placeholder="Write.."></label><br><br>
-           <label class="btn-label"><input type="submit" value="Submit"></label>
-        </form>
-        
+            <input class="btn-add" type="button" value="ADD" onclick="chooseToDo();"><br>
+           <label class="input-label"><input type="text" id="txtName1" class="personal" placeholder="Write what to do.."></label><br>
+           <label class="input-label"><input type="text" id="input2" class="personal" placeholder="Write.."></label><br>
+           <label class="input-label"><input type="text" id="input3" class="personal" placeholder="Write.."></label><br><br>
+           <label class="btn-label"><input type="submit" value="Submit" name="submit-form"></label>
+        </form>    
     </div>
+       <div class="box-1" id="divDisplay">
+           
+       </div>
 
 
 

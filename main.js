@@ -1,6 +1,36 @@
-// alert("Hello")
+function selectToDo(){
+    let selectOption = document.getElementById("selToDo");
+    let selectDisplay = document.getElementById("divDisplay");
 
+        let selTodo = selectOption.Value;
+        let todo = selTodo;
+        switch(todo){
+            case 'email':
+                return 'Write an Email';
+        }
+
+        selectDisplay.innerHTML = todo;
+        
+};
+
+function chooseToDo(){
+    let txtName1 = document.getElementById('txtName1');
+    let divDisplay = document.getElementById("divDisplay");
+        
+        let outPut = txtName1.Value;
+
+        divDisplay.innerHTML = "<em>" + outPut + "</em>";
+        divDisplay += "is working now ..";
+
+}
+function changeColor(color){
+    var color = getElementById("divDisplay");
+    docment.body.style.backgroundColor = color;
+}
+
+// alert("Hello")
 // creating array of object
+/*
 let todos = [
     {'text': 'Walk the dog'},
     {'text': 'Buy some milk'},
@@ -62,4 +92,4 @@ function deleteTodo (todo) {
 const itemToDelete = 'Buy some milk'
 // deleteTodo(itemToDelete)
 updateTodos()
-deleteTodo(itemToDelete)
+deleteTodo(itemToDelete)*/
