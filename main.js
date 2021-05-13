@@ -3,29 +3,37 @@ function selectToDo(){
     let selectDisplay = document.getElementById("divDisplay");
 
         let selTodo = selectOption.Value;
-        let todo = selTodo;
-        switch(todo){
+        switch(selTodo){
             case 'email':
                 return 'Write an Email';
+            case 'dog':
+                return 'Walk the Dog';
+            case 'icream ':
+                return 'Buy Ice cream';
+            case 'pizza':
+                return 'Order some Pizza';
+            case 'shop':
+                return 'Do small Shopping';
+            case 'book':
+                return 'Read a Book';
+            case 'news':
+                return 'Check the News';
+            case 'friday':
+                return 'Weekend Planing';
         }
 
-        selectDisplay.innerHTML = todo;
+        selectDisplay.innerHTML = selTodo;
         
 };
 
 function chooseToDo(){
-    let txtName1 = document.getElementById('txtName1');
+    let txtName1 = document.getElementById("txtName1");
     let divDisplay = document.getElementById("divDisplay");
         
         let outPut = txtName1.Value;
 
-        divDisplay.innerHTML = "<em>" + outPut + "</em>";
-        divDisplay += "is working now ..";
+        divDisplay.innerHTML = outPut;
 
-}
-function changeColor(color){
-    var color = getElementById("divDisplay");
-    docment.body.style.backgroundColor = color;
 }
 
 // alert("Hello")
